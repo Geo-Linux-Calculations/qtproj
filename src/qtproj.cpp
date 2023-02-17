@@ -31,6 +31,20 @@ void QtProj::slot_transfer()
 
     qsSrc = ui.le_srcCS->text();
     qsDst = ui.le_dstCS->text();
+
+    if (qsSrc.isEmpty())
+    {
+        qsSrc = QString(PROJSTRDEF);
+        ui.le_srcCS->clear();
+        ui.le_srcCS->insert(qsSrc);
+    }
+    if (qsDst.isEmpty())
+    {
+
+        qsDst = QString(PROJSTRDEF);
+        ui.le_dstCS->clear();
+        ui.le_dstCS->insert(qsDst);
+    }
     // e.g.
     // QString qsSrc = "+proj=longlat +datum=WGS84 +no_defs";
     // QString qsDst = "+proj=tmerc +lat_0=0 +lon_0=105 +k=1 +x_0=18500000 +y_0=0 +ellps=krass +units=m +no_defs  +towgs84=0,0,0,0,0,0,0";

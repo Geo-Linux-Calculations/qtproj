@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "ui_qtproj.h"
 
+#define PROJSTRDEF "+proj=longlat +datum=WGS84 +no_defs"
+
 class QtProj : public QMainWindow
 {
     Q_OBJECT
